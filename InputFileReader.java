@@ -12,11 +12,12 @@ public class InputFileReader {
     Scanner userPath = new Scanner(System.in);
     String inputPath = userPath.nextLine();
 
-    String line;
     BufferedReader in = new BufferedReader(new FileReader(inputPath));
-    line = in.readLine();
+
+    for (String line = in.readLine(); line != null; line = in.readLine()) {
     System.out.println(line);
     }
+  }
     public static void main (String args[]) {
         System.out.println("main");
 
