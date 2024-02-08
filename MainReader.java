@@ -12,7 +12,7 @@ public class MainReader {
 	        ContentsFileReader.readFileContents();
             }
 	    if (userFinalOption.equals("read -cw")) {
-	        CharacterWFileReader.readCharacterContents();
+	        CharacterWFileReader.readCharacterWContents();
 	    }
     }
 }

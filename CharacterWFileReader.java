@@ -11,13 +11,13 @@ public class CharacterWFileReader {
 
     public static void main (String args[]) {
     try {
-            readCharacterContents();
+            readCharacterWContents();
         } catch (IOException ioe) {
 	    ioe.printStackTrace();
 	}
     }
     
-    public static void readCharacterContents() throws IOException  {
+    public static void readCharacterWContents() throws IOException  {
         System.out.println("Type the full path of the file you want to read:");
 	Scanner userReadPath = new Scanner(System.in);
 	String inputReadPath = userReadPath.nextLine();
