@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class ListExercise {
 
     public static void main(String args[]) {
-        System.out.println("type 'number'");
+        System.out.println("type 'number [options]'");
 	Scanner userInput = new Scanner(System.in);
 	String userOption = userInput.nextLine();
 
@@ -30,6 +30,9 @@ public class ListExercise {
 	sc.close();
 
 	Collections.sort(numbers);
+	System.out.println("Least to greatest: " + numbers);
+	Collections.reverse(numbers);
+	System.out.println("Greatest to least: " + numbers);
 	System.out.println(numbers);
     }
 }
