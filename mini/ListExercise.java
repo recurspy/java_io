@@ -5,11 +5,24 @@ import java.util.Scanner;
 
 public class ListExercise {
 
-    // sorting integers by least to greatest
     public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-	
-        List<Integer> numbers = new ArrayList<>();
+        System.out.println("type 'number [options]'");
+	Scanner userInput = new Scanner(System.in);
+	String userOption = userInput.nextLine();
+
+        if (userOption.equals("number")) {
+	    numberList();
+	} else {
+	    System.out.println("Goodbye");
+	}
+    }
+
+    // sorting integers by least to greatest
+    public static void numberList() {
+        System.out.println("type the numbers you want to sort, then type a non-integer when you're done:");
+	Scanner sc = new Scanner(System.in);
+
+	List<Integer> numbers = new ArrayList<>();
 
 	while (sc.hasNextInt()) {
 	    numbers.add(sc.nextInt());
@@ -17,6 +30,9 @@ public class ListExercise {
 	sc.close();
 
 	Collections.sort(numbers);
+	System.out.println("Least to greatest: " + numbers);
+	Collections.reverse(numbers);
+	System.out.println("Greatest to least: " + numbers);
 	System.out.println(numbers);
     }
 }
