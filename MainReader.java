@@ -14,5 +14,8 @@ public class MainReader {
 	    if (userFinalOption.equals("read -cw")) {
 	        CharacterWFileReader.readCharacterWContents();
 	    }
+	    if (userFinalOption.equals("read -c")) {
+	        CharacterFileReader.characterFileReader();
+	    }
     }
 }
